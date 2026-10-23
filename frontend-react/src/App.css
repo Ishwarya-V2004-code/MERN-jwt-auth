@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background: #3a5bdb;
+
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-box input ::placeholder {
+  color: white;
+  opacity: 0.8;
+
+}
+
+.form-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.form-box input:focus {
+  border-color: #667eea;
+}
+
+.form-box button {
+
+  padding: 10px 30px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.form-box button:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* For Home page - 5 buttons */
+.form-box button + br + br + button {
+  margin-top: 0;
+}
