@@ -13,14 +13,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: [
-        "https://mern-jwt-auth-w77l.vercel.app",
-        "https://mern-jwt-auth-w77l-7i0orex3a-ish-468a.vercel.app",
-        "https://mern-jwt-auth-w77l-cwoii38g5-ish-468a.vercel.app",
-        "https://mern-jwt-auth-w77l-git-main-ishu-468a.vercel.app",
-        "http://localhost:3000",
-        "http://localhost:5173"
-    ],
+    origin: true,
     credentials: true
 }))
 
