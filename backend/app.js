@@ -12,7 +12,14 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: [
+        "mern-jwt-auth-w77l-git-main-ishu-468a.vercel.app",
+        "mern-jwt-auth-w77l-2fyfijd7e-ishu-468a.vercel.app",
+        "http://localhost:3000"
+    ],
+    credentials: true
+}))
 
 mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
