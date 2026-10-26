@@ -15,7 +15,8 @@ function Signup() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000/signup"
+      const response = await fetch(`${API_URL}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -38,27 +39,27 @@ function Signup() {
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Signup</h1>
-      
-      <input 
-        placeholder="username" 
+
+      <input
+        placeholder="username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <br/><br/>
+      <br /><br />
 
-      <input 
-        type="password" 
+      <input
+        type="password"
         placeholder="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <br/><br/>
+      <br /><br />
 
       <select value={role} onChange={(e) => setRole(e.target.value)}>
         <option value="user">User</option>
         <option value="admin">Admin</option>
       </select>
-      <br/><br/>
+      <br /><br />
 
       <button onClick={handleSignup}>Signup</button>
     </div>

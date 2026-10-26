@@ -8,7 +8,8 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://localhost:3000/login", {
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000/login";
+      const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -55,7 +56,7 @@ function Login() {
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
-      <br/><br/>
+      <br /><br />
 
       <input
         type="password"
@@ -63,7 +64,7 @@ function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <br/><br/>
+      <br /><br />
 
       <button onClick={handleLogin}>Login</button>
     </div>
