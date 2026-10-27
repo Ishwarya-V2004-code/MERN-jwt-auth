@@ -8,7 +8,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000/login";
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
       const response = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: {

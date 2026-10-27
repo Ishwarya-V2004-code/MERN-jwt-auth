@@ -15,7 +15,7 @@ function Signup() {
     };
 
     try {
-      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000/signup"
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000";
       const response = await fetch(`${API_URL}/signup`, {
         method: "POST",
         headers: {
