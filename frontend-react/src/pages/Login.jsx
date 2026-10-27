@@ -33,7 +33,7 @@ function Login() {
         const role = payload.role || data.role;
 
         // Role based redirect - your old logic
-        if (payload.role === "admin") {
+        if (role === "admin") {
           navigate("/admin"); // was: admin.html
         } else {
           navigate("/profile"); // was: profile.html
