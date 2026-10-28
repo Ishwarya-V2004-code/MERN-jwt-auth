@@ -8,9 +8,10 @@ function Profile() {
   // Your old btn - Get Profile
   const handleProfile = async () => {
     const token = localStorage.getItem("token");
+    const API_URL=process.env.REACT_APP_API_URL
 
     try {
-      const response = await fetch("http://localhost:3000/profile", {
+      const response = await fetch(`${API_URL}/profile`, {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`
